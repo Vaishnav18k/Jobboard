@@ -1,6 +1,11 @@
+'use client';
 import React from "react";
 
+//type defintion
+import { useRouter } from "next/navigation";
+
 export interface JobCardProps {
+  id: string;
   title: string;
   company: string;
   location: string;
@@ -13,6 +18,7 @@ export interface JobCardProps {
 }
 
 export default function JobCard({
+  id,
   title,
   company,
   location,
@@ -23,8 +29,16 @@ export default function JobCard({
   postedDate,
   companyLogo,
 }: JobCardProps) {
+  const router = useRouter();
   return (
-    <div className="bg-white rounded-2xl shadow-lg border border-gray-100 p-6 flex flex-col gap-4 w-full max-w-2xl mx-auto hover:shadow-xl transition-shadow">
+    <div
+      className="bg-white rounded-2xl shadow-lg border border-gray-100 p-6 flex flex-col gap-4 w-full max-w-2xl mx-auto hover:shadow-xl transition-shadow cursor-pointer hover:ring-2 hover:ring-blue-400"
+      onClick={() => router.push(`/jobs/${id}`)}
+      tabIndex={0}
+      role="button"
+      aria-label={`View details for ${title}`}
+      onKeyDown={(e) => { if (e.key === 'Enter' || e.key === ' ') { router.push(`/jobs/${id}`); } }}
+    >
       <div className="flex items-center gap-4">
         <span className="text-3xl bg-blue-50 rounded-xl p-2">{companyLogo}</span>
         <div>
