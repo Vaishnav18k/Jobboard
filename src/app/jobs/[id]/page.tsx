@@ -56,7 +56,7 @@ const JobDetail = () => {
       <Header />
       <div style={{ maxWidth: 1200, margin: "0 auto" }}>
         <button
-          onClick={() => router.push("/jobs")}
+          onClick={() => router.push("/")}
           style={{
             display: "flex", alignItems: "center", gap: 8, background: "#fff", border: "none", borderRadius: 8, padding: "10px 18px", marginBottom: 28, fontSize: 18, cursor: "pointer", boxShadow: "0 1px 4px #0001"
           }}

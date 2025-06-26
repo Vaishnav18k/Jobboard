@@ -1,9 +1,9 @@
 'use client';
 import React from "react";
 
-//type defintion
-import { useRouter } from "next/navigation";
 
+import { useRouter } from "next/navigation";
+//type defintion
 export interface JobCardProps {
   id: string;
   title: string;
