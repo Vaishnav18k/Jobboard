@@ -120,27 +120,17 @@ export default function PostJobPage() {
             <label className="block font-medium mb-1">Benefits <span className="text-xs text-gray-500">(comma separated)</span></label>
             <textarea name="benefits" value={form.benefits} onChange={handleChange} rows={2} placeholder="e.g. Remote work, Health insurance" className="w-full border rounded-md px-3 py-2" />
           </div>
-          <div>
-            <label className="block font-medium mb-1">Description</label>
-            <textarea name="description" value={form.description} onChange={handleChange} required rows={4} className="w-full border rounded-md px-3 py-2" />
+          <div className="md:col-span-2">
+            <div className="flex gap-4 mt-2">
+              <button type="submit" disabled={loading} className="flex-1 bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 rounded-md">
+                {loading ? "Posting..." : "Post Job"}
+              </button>
+              <button type="button" onClick={() => router.push("/")} className="flex-1 bg-gray-200 hover:bg-gray-300 text-gray-800 font-semibold py-3 rounded-md">
+                Cancel
+              </button>
+            </div>
           </div>
-        
-          <div>
-            <label className="block font-medium mb-1">Requirements <span className="text-xs text-gray-500">(comma separated)</span></label>
-            <textarea name="requirements" value={form.requirements} onChange={handleChange} rows={2} placeholder="e.g. 3+ years experience, React, Team player" className="w-full border rounded-md px-3 py-2" />
-          </div>
-          <div>
-            <label className="block font-medium mb-1">Benefits <span className="text-xs text-gray-500">(comma separated)</span></label>
-            <textarea name="benefits" value={form.benefits} onChange={handleChange} rows={2} placeholder="e.g. Remote work, Health insurance" className="w-full border rounded-md px-3 py-2" />
-          </div>
-          <div className="flex gap-4 mt-2">
-            <button type="submit" disabled={loading} className="flex-1 bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 rounded-md">
-              {loading ? "Posting..." : "Post Job"}
-            </button>
-            <button type="button" onClick={() => router.push("/")} className="flex-1 bg-gray-200 hover:bg-gray-300 text-gray-800 font-semibold py-3 rounded-md">
-              Cancel
-            </button>
-          </div>
+          
           {success && <div className="text-green-600 text-center mt-2">Job posted successfully!</div>}
           {error && <div className="text-red-600 text-center mt-2">{error}</div>}
         </form>
