@@ -1,153 +1,188 @@
 [
-    {
-      "id": "1",
-      "title": "Senior Frontend Developer",
-      "company": "TechCorp Solutions",
-      "location": "San Francisco, CA",
-      "category": "Engineering",
-      "type": "Full-time",
-      "salary": "$120,000 - $150,000",
-      "description": "We are looking for an experienced Frontend Developer to join our dynamic team. You will be responsible for developing user-facing web applications using modern JavaScript frameworks and ensuring optimal user experience.",
-      "requirements": [
-        "5+ years of experience in Frontend Development",
-        "Proficiency in React, Vue.js, or Angular",
-        "Strong knowledge of HTML5, CSS3, and JavaScript",
-        "Experience with responsive design and cross-browser compatibility",
-        "Knowledge of version control systems (Git)"
-      ],
-      "benefits": [
-        "Health, dental, and vision insurance",
-        "401(k) with company matching",
-        "Flexible work arrangements",
-        "Professional development budget"
-      ],
-      "postedDate": "2024-01-15",
-      "companyLogo": "🏢"
-    },
-    {
-      "id": "2",
-      "title": "UX/UI Designer",
-      "company": "Design Studio Pro",
-      "location": "New York, NY",
-      "category": "Design",
-      "type": "Full-time",
-      "salary": "$80,000 - $110,000",
-      "description": "Join our creative team as a UX/UI Designer where you'll create intuitive and visually appealing digital experiences. You'll work closely with product managers and developers to bring ideas to life.",
-      "requirements": [
-        "3+ years of UX/UI design experience",
-        "Proficiency in Figma, Sketch, or Adobe Creative Suite",
-        "Strong portfolio demonstrating design process",
-        "Understanding of user-centered design principles",
-        "Experience with prototyping tools"
-      ],
-      "benefits": [
-        "Creative work environment",
-        "Latest design tools and equipment",
-        "Flexible hours",
-        "Team building events"
-      ],
-      "postedDate": "2024-01-12",
-      "companyLogo": "🎨"
-    },
-    {
-      "id": "3",
-      "title": "Product Manager",
-      "company": "InnovateLabs",
-      "location": "Austin, TX",
-      "category": "Product",
-      "type": "Full-time",
-      "salary": "$100,000 - $130,000",
-      "description": "We're seeking a strategic Product Manager to drive product development and growth. You'll define product roadmaps, work with cross-functional teams, and ensure we're building products our customers love.",
-      "requirements": [
-        "4+ years of product management experience",
-        "Strong analytical and problem-solving skills",
-        "Experience with agile development methodologies",
-        "Excellent communication and leadership skills",
-        "Data-driven decision making approach"
-      ],
-      "benefits": [
-        "Equity participation",
-        "Comprehensive health benefits",
-        "Learning and development opportunities",
-        "Remote work options"
-      ],
-      "postedDate": "2024-01-10",
-      "companyLogo": "🚀"
-    },
-    {
-      "id": "4",
-      "title": "Data Scientist",
-      "company": "DataTech Analytics",
-      "location": "Seattle, WA",
-      "category": "Data Science",
-      "type": "Full-time",
-      "salary": "$110,000 - $140,000",
-      "description": "Join our data science team to extract insights from complex datasets and drive business decisions. You'll work on machine learning models, statistical analysis, and data visualization projects.",
-      "requirements": [
-        "Master's degree in Data Science, Statistics, or related field",
-        "3+ years of experience in data science or analytics",
-        "Proficiency in Python, R, and SQL",
-        "Experience with machine learning frameworks",
-        "Strong statistical analysis skills"
-      ],
-      "benefits": [
-        "Cutting-edge technology stack",
-        "Conference attendance budget",
-        "Flexible working hours",
-        "Health and wellness programs"
-      ],
-      "postedDate": "2024-01-08",
-      "companyLogo": "📊"
-    },
-    {
-      "id": "5",
-      "title": "Backend Developer",
-      "company": "CloudFirst Systems",
-      "location": "Remote",
-      "category": "Engineering",
-      "type": "Full-time",
-      "salary": "$95,000 - $125,000",
-      "description": "We're looking for a skilled Backend Developer to build and maintain scalable server-side applications. You'll work with cloud technologies and microservices architecture.",
-      "requirements": [
-        "4+ years of backend development experience",
-        "Proficiency in Node.js, Python, or Java",
-        "Experience with cloud platforms (AWS, Azure, GCP)",
-        "Knowledge of database design and optimization",
-        "Understanding of microservices architecture"
-      ],
-      "benefits": [
-        "100% remote work",
-        "Home office setup allowance",
-        "Unlimited PTO",
-        "Professional growth opportunities"
-      ],
-      "postedDate": "2024-01-05",
-      "companyLogo": "☁️"
-    },
-    {
-      "id": "6",
-      "title": "Marketing Specialist",
-      "company": "GrowthMax Agency",
-      "location": "Los Angeles, CA",
-      "category": "Marketing",
-      "type": "Full-time",
-      "salary": "$65,000 - $85,000",
-      "description": "Join our marketing team to develop and execute marketing campaigns that drive growth and engagement. You'll work across digital channels and help build our brand presence.",
-      "requirements": [
-        "2+ years of marketing experience",
-        "Experience with digital marketing platforms",
-        "Strong writing and communication skills",
-        "Knowledge of SEO and content marketing",
-        "Analytics and data interpretation skills"
-      ],
-      "benefits": [
-        "Creative work environment",
-        "Professional development budget",
-        "Team outings and events",
-        "Performance bonuses"
-      ],
-      "postedDate": "2024-01-03",
-      "companyLogo": "📈"
-    }
-  ]
-  
+  {
+    "id": "1",
+    "title": "Senior Frontend Developer",
+    "company": "TechCorp Solutions",
+    "location": "San Francisco, CA",
+    "category": "Engineering",
+    "type": "Full-time",
+    "salary": "$120,000 - $150,000",
+    "description": "We are looking for an experienced Frontend Developer to join our dynamic team. You will be responsible for developing user-facing web applications using modern JavaScript frameworks and ensuring optimal user experience.",
+    "requirements": [
+      "5+ years of experience in Frontend Development",
+      "Proficiency in React, Vue.js, or Angular",
+      "Strong knowledge of HTML5, CSS3, and JavaScript",
+      "Experience with responsive design and cross-browser compatibility",
+      "Knowledge of version control systems (Git)"
+    ],
+    "benefits": [
+      "Health, dental, and vision insurance",
+      "401(k) with company matching",
+      "Flexible work arrangements",
+      "Professional development budget"
+    ],
+    "postedDate": "2024-01-15",
+    "companyLogo": "🏢"
+  },
+  {
+    "id": "2",
+    "title": "UX/UI Designer",
+    "company": "Design Studio Pro",
+    "location": "New York, NY",
+    "category": "Design",
+    "type": "Full-time",
+    "salary": "$80,000 - $110,000",
+    "description": "Join our creative team as a UX/UI Designer where you'll create intuitive and visually appealing digital experiences. You'll work closely with product managers and developers to bring ideas to life.",
+    "requirements": [
+      "3+ years of UX/UI design experience",
+      "Proficiency in Figma, Sketch, or Adobe Creative Suite",
+      "Strong portfolio demonstrating design process",
+      "Understanding of user-centered design principles",
+      "Experience with prototyping tools"
+    ],
+    "benefits": [
+      "Creative work environment",
+      "Latest design tools and equipment",
+      "Flexible hours",
+      "Team building events"
+    ],
+    "postedDate": "2024-01-12",
+    "companyLogo": "🎨"
+  },
+  {
+    "id": "3",
+    "title": "Product Manager",
+    "company": "InnovateLabs",
+    "location": "Austin, TX",
+    "category": "Product",
+    "type": "Full-time",
+    "salary": "$100,000 - $130,000",
+    "description": "We're seeking a strategic Product Manager to drive product development and growth. You'll define product roadmaps, work with cross-functional teams, and ensure we're building products our customers love.",
+    "requirements": [
+      "4+ years of product management experience",
+      "Strong analytical and problem-solving skills",
+      "Experience with agile development methodologies",
+      "Excellent communication and leadership skills",
+      "Data-driven decision making approach"
+    ],
+    "benefits": [
+      "Equity participation",
+      "Comprehensive health benefits",
+      "Learning and development opportunities",
+      "Remote work options"
+    ],
+    "postedDate": "2024-01-10",
+    "companyLogo": "🚀"
+  },
+  {
+    "id": "4",
+    "title": "Data Scientist",
+    "company": "DataTech Analytics",
+    "location": "Seattle, WA",
+    "category": "Data Science",
+    "type": "Full-time",
+    "salary": "$110,000 - $140,000",
+    "description": "Join our data science team to extract insights from complex datasets and drive business decisions. You'll work on machine learning models, statistical analysis, and data visualization projects.",
+    "requirements": [
+      "Master's degree in Data Science, Statistics, or related field",
+      "3+ years of experience in data science or analytics",
+      "Proficiency in Python, R, and SQL",
+      "Experience with machine learning frameworks",
+      "Strong statistical analysis skills"
+    ],
+    "benefits": [
+      "Cutting-edge technology stack",
+      "Conference attendance budget",
+      "Flexible working hours",
+      "Health and wellness programs"
+    ],
+    "postedDate": "2024-01-08",
+    "companyLogo": "📊"
+  },
+  {
+    "id": "5",
+    "title": "Backend Developer",
+    "company": "CloudFirst Systems",
+    "location": "Remote",
+    "category": "Engineering",
+    "type": "Full-time",
+    "salary": "$95,000 - $125,000",
+    "description": "We're looking for a skilled Backend Developer to build and maintain scalable server-side applications. You'll work with cloud technologies and microservices architecture.",
+    "requirements": [
+      "4+ years of backend development experience",
+      "Proficiency in Node.js, Python, or Java",
+      "Experience with cloud platforms (AWS, Azure, GCP)",
+      "Knowledge of database design and optimization",
+      "Understanding of microservices architecture"
+    ],
+    "benefits": [
+      "100% remote work",
+      "Home office setup allowance",
+      "Unlimited PTO",
+      "Professional growth opportunities"
+    ],
+    "postedDate": "2024-01-05",
+    "companyLogo": "☁️"
+  },
+  {
+    "id": "6",
+    "title": "Marketing Specialist",
+    "company": "GrowthMax Agency",
+    "location": "Los Angeles, CA",
+    "category": "Marketing",
+    "type": "Full-time",
+    "salary": "$65,000 - $85,000",
+    "description": "Join our marketing team to develop and execute marketing campaigns that drive growth and engagement. You'll work across digital channels and help build our brand presence.",
+    "requirements": [
+      "2+ years of marketing experience",
+      "Experience with digital marketing platforms",
+      "Strong writing and communication skills",
+      "Knowledge of SEO and content marketing",
+      "Analytics and data interpretation skills"
+    ],
+    "benefits": [
+      "Creative work environment",
+      "Professional development budget",
+      "Team outings and events",
+      "Performance bonuses"
+    ],
+    "postedDate": "2024-01-03",
+    "companyLogo": "📈"
+  },
+  {
+    "id": "7",
+    "title": "df",
+    "company": "df",
+    "location": "df",
+    "category": "df",
+    "type": "Full-time",
+    "salary": "100000",
+    "description": "sde",
+    "requirements": [
+      "3"
+    ],
+    "benefits": [
+      "wfo"
+    ],
+    "postedDate": "2025-06-27",
+    "companyLogo": ""
+  },
+  {
+    "id": "8",
+    "title": "hello",
+    "company": "HuggingFace",
+    "location": "Chennai, TamilNadu.",
+    "category": "df",
+    "type": "Full-time",
+    "salary": "100000",
+    "description": "ss",
+    "requirements": [
+      "s"
+    ],
+    "benefits": [
+      "d"
+    ],
+    "postedDate": "2025-06-27",
+    "companyLogo": ""
+  }
+]

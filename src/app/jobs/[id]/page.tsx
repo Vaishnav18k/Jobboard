@@ -40,7 +40,7 @@ const JobDetail = () => {
   // If the job is not found, show a not found message
   if (!job) {
     return (
-      <div>
+      <div >
         <Header />
         <div style={{ padding: 32, textAlign: "center" }}>
           <h2>Job Not Found</h2>
@@ -51,7 +51,8 @@ const JobDetail = () => {
   }
 
   return (
-    <div style={{ background: "#f7f9fa", minHeight: "100vh", padding: 24 }}>
+    <div className="min-h-screen">
+    
       <Header />
       <div style={{ maxWidth: 1200, margin: "0 auto" }}>
         <button
@@ -126,6 +127,7 @@ const JobDetail = () => {
         </div>
       </div>
     </div>
+  
   );
 };
 
