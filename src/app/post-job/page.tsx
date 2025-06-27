@@ -72,15 +72,15 @@ export default function PostJobPage() {
         <h1 className="text-3xl font-bold mb-6 text-center">Post a Job</h1>
         <form onSubmit={handleSubmit} className="bg-white rounded-xl shadow-md p-8 grid grid-cols-1 md:grid-cols-2 gap-5">
           <div className="md:col-span-1">
-            <label className="block font-medium mb-1">Job Title</label>
+            <label className="block font-medium mb-1">Job Title*</label>
             <input name="title" value={form.title} onChange={handleChange} required className="w-full border rounded-md px-3 py-2" />
           </div>
           <div className="md:col-span-1">
-            <label className="block font-medium mb-1">Company</label>
+            <label className="block font-medium mb-1">Company*</label>
             <input name="company" value={form.company} onChange={handleChange} required className="w-full border rounded-md px-3 py-2" />
           </div>
           <div className="md:col-span-1">
-            <label className="block font-medium mb-1">Location</label>
+            <label className="block font-medium mb-1">Location*</label>
             <input name="location" value={form.location} onChange={handleChange} required className="w-full border rounded-md px-3 py-2" />
           </div>
           <div className="md:col-span-1">
@@ -109,15 +109,15 @@ export default function PostJobPage() {
             </select>
           </div>
           <div className="md:col-span-2">
-            <label className="block font-medium mb-1">Description</label>
+            <label className="block font-medium mb-1">Job Description*</label>
             <textarea name="description" value={form.description} onChange={handleChange} required rows={4} className="w-full border rounded-md px-3 py-2" />
           </div>
           <div className="md:col-span-2">
-            <label className="block font-medium mb-1">Requirements <span className="text-xs text-gray-500">(comma separated)</span></label>
+            <label className="block font-medium mb-1">Requirements <span className="text-xs text-gray-500"></span></label>
             <textarea name="requirements" value={form.requirements} onChange={handleChange} rows={2} placeholder="e.g. 3+ years experience, React, Team player" className="w-full border rounded-md px-3 py-2" />
           </div>
           <div className="md:col-span-2">
-            <label className="block font-medium mb-1">Benefits <span className="text-xs text-gray-500">(comma separated)</span></label>
+            <label className="block font-medium mb-1">Benefits <span className="text-xs text-gray-500"></span></label>
             <textarea name="benefits" value={form.benefits} onChange={handleChange} rows={2} placeholder="e.g. Remote work, Health insurance" className="w-full border rounded-md px-3 py-2" />
           </div>
           <div className="md:col-span-2">
