@@ -2,6 +2,8 @@
 import React, { useState } from "react";
 import Header from "../components/Header";
 import { useRouter } from "next/navigation";
+import { useMutation } from "convex/react";
+import { api } from "../../../convex/_generated/api";
 
 export default function PostJobPage() {
   const [form, setForm] = useState({
@@ -14,6 +16,7 @@ export default function PostJobPage() {
     description: "",    
     requirements: "",
     benefits: "",
+    companyLogo: "",
   });
   const [loading, setLoading] = useState(false);
   const [success, setSuccess] = useState(false);
@@ -24,38 +27,54 @@ export default function PostJobPage() {
     setForm({ ...form, [e.target.name]: e.target.value });
   };
 
+  const createJob = useMutation(api.jobs.createJob);
+
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setLoading(true);
     setError("");
     setSuccess(false);
     try {
-      const res = await fetch("/api/post-job", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(form),
+      // Parse requirements and benefits as arrays
+      const requirements = typeof form.requirements === "string"
+        ? form.requirements.split(",").map(s => s.trim()).filter(Boolean)
+        : [];
+      const benefits = typeof form.benefits === "string"
+        ? form.benefits.split(",").map(s => s.trim()).filter(Boolean)
+        : [];
+      const postedDate = new Date().toISOString().slice(0, 10);
+      await createJob({
+        title: form.title,
+        company: form.company,
+        location: form.location,
+        salary: form.salary,
+        type: form.type,
+        category: form.category,
+        description: form.description,
+        requirements,
+        benefits,
+        postedDate,
+        companyLogo: form.companyLogo || "",
       });
-      if (res.ok) {
-        setSuccess(true);
-        setForm({
-          title: "",
-          company: "",
-          location: "",
-          salary: "",
-          type: "Full-time",
-          category: "",
-          description: "",
-          requirements: "",
-          benefits: "",
-        });
-      } else {
-        setError("Failed to post job.");
-      }
+      setSuccess(true);
+      setForm({
+        title: "",
+        company: "",
+        location: "",
+        salary: "",
+        type: "Full-time",
+        category: "",
+        description: "",
+        requirements: "",
+        benefits: "",
+        companyLogo: "",
+      });
     } catch (err) {
-      setError("Error posting job.");
+      setError("Failed to post job.");
     }
     setLoading(false);
   };
+      
 
   return (
     <div className="min-h-screen bg-gray-50">
@@ -78,6 +97,10 @@ export default function PostJobPage() {
           <div className="md:col-span-1">
             <label className="block font-medium mb-1">Company*</label>
             <input name="company" value={form.company} onChange={handleChange} required className="w-full border rounded-md px-3 py-2" />
+          </div>
+          <div className="md:col-span-1">
+            <label className="block font-medium mb-1">Company Logo <span className="text-xs text-gray-500">(emoji or icon)</span></label>
+            <input name="companyLogo" value={form.companyLogo} onChange={handleChange} placeholder="e.g. 🏢" className="w-full border rounded-md px-3 py-2" />
           </div>
           <div className="md:col-span-1">
             <label className="block font-medium mb-1">Location*</label>

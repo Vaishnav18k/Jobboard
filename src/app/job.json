@@ -184,5 +184,23 @@
     ],
     "postedDate": "2025-06-27",
     "companyLogo": ""
+  },
+  {
+    "id": "9",
+    "title": "Dev",
+    "company": "dlf",
+    "location": "Coimbatore,TamilNadu",
+    "category": "",
+    "type": "Full-time",
+    "salary": "100000",
+    "description": "nil",
+    "requirements": [
+      "nil"
+    ],
+    "benefits": [
+      "wfo"
+    ],
+    "postedDate": "2025-06-27",
+    "companyLogo": ""
   }
 ]
