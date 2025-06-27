@@ -1,14 +1,14 @@
 'use client'
 import React from "react";
+import { Id } from "../../../../convex/_generated/dataModel";
 import Header from '../../components/Header';
-// Import React and other needed modules
 import { useParams, useRouter } from "next/navigation";
-// Import the jobs data from the JSON file
-import jobsData from "../../job.json";
+import { useQuery } from "convex/react";
+import { api } from "../../../../convex/_generated/api";
 
 // Define a type for a job object
 interface Job {
-  id: string;
+  _id: string;
   title: string;
   company: string;
   location: string;
@@ -19,53 +19,34 @@ interface Job {
   requirements: string[];
   benefits: string[];
   postedDate: string;
-  companyLogo: string;
+  companyLogo?: string;
 }
 
-// This page shows the details for a single job, based on the job ID in the URL
-const JobDetail = () => {
-  // Get the route parameters and router for navigation
+export default function JobDetail() {
   const params = useParams();
+  const id = params.id as Id<"jobs">;
+  const job: Job | undefined = useQuery(api.jobs.getJobById, { id }) ?? undefined;
   const router = useRouter();
 
-  // Get the job ID from the URL, like /1 or /2
-  const jobId = params?.id as string;
-
-  // jobsData is an array of all jobs from job.json
-  // If you get a type error here, make sure your tsconfig allows importing JSON as arrays
-  const jobsArray: Job[] = Array.isArray(jobsData) ? jobsData : [];
-  // Find the job that matches the ID
-  const job = jobsArray.find((item) => item.id === jobId);
-
-  // If the job is not found, show a not found message
+  if (job === undefined) {
+    return <div className="text-center py-20">Loading...</div>;
+  }
   if (!job) {
-    return (
-      <div >
-        <Header />
-        <div style={{ padding: 32, textAlign: "center" }}>
-          <h2>Job Not Found</h2>
-          <p>The job you are looking for does not exist.</p>
-        </div>
-      </div>
-    );
+    return <div className="text-center py-20 text-red-500">Job not found.</div>;
   }
 
   return (
-    <div className="min-h-screen">
-    
+    <div className="min-h-screen bg-gray-50">
       <Header />
-      <div style={{ maxWidth: 1200, margin: "0 auto" }}>
+      <div className="max-w-6xl mx-auto py-12 px-4">
         <button
           onClick={() => router.push("/")}
-          style={{
-            display: "flex", alignItems: "center", gap: 8, background: "#fff", border: "none", borderRadius: 8, padding: "10px 18px", marginBottom: 28, fontSize: 18, cursor: "pointer", boxShadow: "0 1px 4px #0001"
-          }}
+          className="mb-8 bg-white px-4 py-2 rounded shadow border border-gray-200 hover:bg-gray-100 flex items-center gap-2"
         >
-          <span style={{ fontSize: 22 }}>&larr;</span> Back to Jobs
-        </button>
-        <div style={{ display: "flex", gap: 32 }}>
-          {/* Main content */}
-          <div style={{ flex: 2 }}>
+          <span className="text-xl">←</span> Back to Jobs
+        </button>  <div style={{ display: "flex", gap: 32 }}>
+       
+<div style={{ flex: 2 }}>
             <div style={{ background: "#fff", borderRadius: 12, padding: 32, marginBottom: 32, boxShadow: "0 2px 8px #0001" }}>
               <div style={{ display: "flex", alignItems: "center", gap: 20, marginBottom: 18 }}>
                 <span style={{ fontSize: 48 }}>{job.companyLogo}</span>
@@ -124,14 +105,16 @@ const JobDetail = () => {
               <button style={{ background: "#f5f5f5", color: "#222", border: "none", borderRadius: 8, padding: "12px 0", width: "100%", fontSize: 18, fontWeight: 500, cursor: "pointer" }}>Save Job</button>
             </div>
           </div>
+
+
+          
         </div>
       </div>
     </div>
-  
-  );
-};
+  );    
+}
 
-export default JobDetail;
+
 
 
 
